@@ -1,5 +1,5 @@
-CREATE DATABASE Agredation;
-USE Agredation;
+CREATE DATABASE Agregation;
+USE Agregation;
 
 CREATE TABLE Category(
 "name" VARCHAR(50) PRIMARY KEY);
@@ -75,15 +75,3 @@ SELECT p.category, SUM(p.price) AS sum
 FROM Purchase AS ps
 INNER JOIN Product AS p ON p.name = ps.name
 GROUP BY p.category;
-
-
-
-
-
-
-
-
-
-
-
-
