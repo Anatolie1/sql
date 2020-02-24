@@ -24,7 +24,14 @@ INSERT INTO Terrien ("name", continent_id)
 VALUES
 ('x001', 1),
 ('azer', 2),
-('con', 3);
+('con', 3),
+('er2', 1),
+('azor', 2),
+('coner', 3),
+('suser', 1),
+('worlo', 2),
+('cio', 3),
+('baise', 2);
 
 CREATE TABLE MartBoss(
 id INT PRIMARY KEY IDENTITY(1,1),
@@ -55,22 +62,13 @@ VALUES
 ('aha', 1, 1),
 ('bob', 2, 1),
 ('sas', 3, 3),
-('puta', 3, 2),
-('sos', 2, 1),
-('aqe', 1, 2),
-('ger', 3, 3),
-('rez', 2, 2),
-('koi', 1, 2),
-('mu', 2, 3),
-('li', 3, 3),
-('wo', 2, 1),
-('hui', 1, 2),
-('frant', 1, 3);
-
-SELECT * FROM Martien;
-SELECT *FROM Terrien;
-SELECT *FROM MartBoss;
-SELECT *FROM Continent;
+('puta', 4, 2),
+('sos', 5, 1),
+('aqe', 6, 2),
+('ger', 7, 3),
+('rez', 8, 2),
+('koi', 9, 2),
+('mu', 10, 3);
 
 SELECT m.name AS Martien, t.name AS Terrien, c.name AS Continent, mb.name AS Base
 FROM Martien AS m
