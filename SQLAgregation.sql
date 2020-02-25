@@ -62,16 +62,12 @@ VALUES
 ('fff','2020-11-01'),
 ('ggg','2020-12-31');
 
-SELECT * FROM Category;
-SELECT * FROM Product;
-SELECT * FROM Purchase;
-
-SELECT p.category, COUNT(ps.name) as number_Product
+SELECT p.category, COUNT(ps.name) as number_Product, SUM(p.price) AS sum
 FROM Purchase AS ps
 INNER JOIN Product AS p ON p.name = ps.name
 GROUP BY p.category;
 
-SELECT p.category, SUM(p.price) AS sum
+SELECT COUNT(ps.name) as number_Product, YEAR(ps.purchaseDate) AS year
 FROM Purchase AS ps
 INNER JOIN Product AS p ON p.name = ps.name
-GROUP BY p.category;
+GROUP BY YEAR(ps.purchaseDate);
